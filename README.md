@@ -38,3 +38,9 @@ View page
 ![city view](/public/images/city-view.png)
 Create page
 ![city create](/public/images/city-create.png)
+
+## Testimonial Page
+Index page
+![testimonial index](/public/images/testimonial-index.png)
+Create page
+![testimonial create](/public/images/testimonial-create.png)

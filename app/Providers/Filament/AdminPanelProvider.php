@@ -56,6 +56,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->brandLogo(asset('images/logo.svg'))
-            ->brandLogoHeight('2.5rem');
+            ->brandLogoHeight('2.5rem')
+            ->sidebarCollapsibleOnDesktop();
     }
 }

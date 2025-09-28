@@ -1,30 +1,31 @@
 <?php
 
-namespace App\Filament\Resources\Cities\Tables;
+namespace App\Filament\Resources\Testimonials\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
-class CitiesTable
+class TestimonialsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                ImageColumn::make('image'),
+                ImageColumn::make('photo'),
+                TextColumn::make('boardingHouse.name'),
                 TextColumn::make('name'),
-                TextColumn::make('slug'),
+                TextColumn::make('content'),
+                TextColumn::make('rating'),
             ])
             ->filters([
                 TrashedFilter::make(),
