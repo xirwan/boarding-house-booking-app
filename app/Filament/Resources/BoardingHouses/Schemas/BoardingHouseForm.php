@@ -28,6 +28,7 @@ class BoardingHouseForm
                                 FileUpload::make('thumbnail')
                                     ->image()
                                     ->directory('boarding_house')
+                                    ->visibility('public')
                                     ->required(),
                                 TextInput::make('name')
                                     ->required()
@@ -60,6 +61,7 @@ class BoardingHouseForm
                                         FileUpload::make('image')
                                             ->image()
                                             ->directory('bonuses')
+                                            ->visibility('public')
                                             ->required(),
                                         TextInput::make('name')
                                             ->required(),
@@ -95,6 +97,7 @@ class BoardingHouseForm
                                                 FileUpload::make('image')
                                                     ->image()
                                                     ->directory('rooms')
+                                                    ->visibility('public')
                                                     ->required(),
                                             ])
                                     ])
