@@ -8,6 +8,11 @@
 Boarding house booking app use laravel 12 and filament 4, with midtrans for payment and twilio for whatsapp notification
 <br>(In progress)
 
+## Customer Page
+<p align='center'>
+    <img src="public/images/customer-index.png" alt="customer index page">
+</p>
+
 ## Login Admin Page
 ![admin login page](/public/images/login-admin.png)
 

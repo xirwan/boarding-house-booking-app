@@ -6,7 +6,7 @@
         <div id="TopNav" class="relative flex items-center justify-between px-5 mt-[60px]">
             <div class="flex flex-col gap-1">
                 <p>Good day,</p>
-                <h1 class="font-bold text-xl leading-[30px]">Explore Cozy Home</h1>
+                <h1 class="font-bold text-xl leading-[30px]">Explore Boarding house</h1>
             </div>
         </div>
 
@@ -14,7 +14,7 @@
             <div class="swiper-wrapper">
                 @foreach ($categories as $category)
                     <div class="swiper-slide !w-fit pb-[30px]">
-                        <a href="categories.html" class="card">
+                        <a href="{{ route('category.show', $category->slug) }}" class="card">
                             <div
                                 class="flex flex-col items-center w-[120px] shrink-0 rounded-[40px] p-4 pb-5 gap-3 bg-white shadow-[0px_12px_30px_0px_#0000000D] text-center">
                                 <div class="w-[70px] h-[70px] rounded-full flex shrink-0 overflow-hidden">
@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="flex flex-col gap-[2px]">
                                     <h3 class="font-semibold">{{  $category->name  }}</h3>
-                                    <p class="text-sm text-ngekos-grey">1,304 Kos</p>
+                                    <p class="text-sm text-ngekos-grey">{{ $category->boardingHouses->count() }} Boarding house</p>
                                 </div>
                             </div>
                         </a>
@@ -34,7 +34,7 @@
 
         <section id="Popular" class="flex flex-col gap-4">
             <div class="flex items-center justify-between px-5">
-                <h2 class="font-bold">Popular Kos</h2>
+                <h2 class="font-bold">Popular Boarding house</h2>
                 <a href="#">
                     <div class="flex items-center gap-2">
                         <span>See all</span>
@@ -46,7 +46,7 @@
                 <div class="swiper-wrapper">
                     @foreach ($popularBoardingHouses as $popularBoardingHouse)
                         <div class="swiper-slide !w-fit">
-                            <a href="details.html" class="card">
+                            <a href="{{ route('boarding-house.show', $popularBoardingHouse->slug) }}" class="card">
                                 <div
                                     class="flex flex-col w-[250px] shrink-0 rounded-[30px] border border-[#F1F2F6] p-4 pb-5 gap-[10px] hover:border-[#91BF77] transition-all duration-300">
                                     <div class="flex w-full h-[150px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
@@ -94,7 +94,7 @@
             </div>
             <div class="grid grid-cols-2 gap-4">
                 @foreach ($cities as $city)
-                    <a href="cities.html" class="card">
+                    <a href="{{ route('city.show', $city->slug) }}" class="card">
                         <div
                             class="flex items-center rounded-[22px] p-[10px] gap-3 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
                             <div
@@ -104,7 +104,7 @@
                             </div>
                             <div class="flex flex-col gap-[2px]">
                                 <h3 class="font-semibold">{{ $city->name }}</h3>
-                                <p class="text-sm text-ngekos-grey">1,304 Kos</p>
+                                <p class="text-sm text-ngekos-grey">{{ $city->boardingHouses->count() }} Boarding house</p>
                             </div>
                         </div>
                     </a>
@@ -114,7 +114,7 @@
 
         <section id="Best" class="flex flex-col gap-4 px-5 mt-[30px]">
             <div class="flex items-center justify-between">
-                <h2 class="font-bold">All Great Koskos</h2>
+                <h2 class="font-bold">All Great Boarding house</h2>
                 <a href="#">
                     <div class="flex items-center gap-2">
                         <span>See all</span>
@@ -124,11 +124,11 @@
             </div>
             <div class="flex flex-col gap-4">
                 @foreach ($boardingHouses as $boardingHouse)
-                    <a href="details.html" class="card">
+                    <a href="{{ route('boarding-house.show', $boardingHouse->slug) }}" class="card">
                         <div
                             class="flex rounded-[30px] border border-[#F1F2F6] p-4 gap-4 bg-white hover:border-[#91BF77] transition-all duration-300">
                             <div class="flex w-[120px] h-[183px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                <img src="assets/images/thumbnails/kos-4.png" class="w-full h-full object-cover" alt="icon">
+                                <img src="{{ asset('storage/' . $boardingHouse->thumbnail) }}" class="w-full h-full object-cover" alt="icon">
                             </div>
                             <div class="flex flex-col gap-3 w-full">
                                 <h3 class="font-semibold text-lg leading-[27px] line-clamp-2 min-h-[54px]">{{ $boardingHouse->name }}</h3>
