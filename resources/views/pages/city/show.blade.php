@@ -43,7 +43,7 @@
                         </div>
                         <hr class="border-[#F1F2F6]">
                         <p class="font-semibold text-lg text-ngekos-orange">Rp {{ number_format($boardingHouse->price, 2, ',', '.') }}<span
-                                class="text-sm text-ngekos-grey font-normal">/bulan</span></p>
+                                class="text-sm text-ngekos-grey font-normal">/Month</span></p>
                     </div>
                 </div>
             </a>

@@ -27,7 +27,8 @@ class BoardingHousesTable
                 TextColumn::make('category.name'),
                 TextColumn::make('price')
                     ->money('IDR'), //money() digunakan untuk menampilkan price dalam format uang rupiah
-                ImageColumn::make('thumbnail'),
+                ImageColumn::make('thumbnail')
+                    ->disk('public'),
 
             ])
             ->filters([

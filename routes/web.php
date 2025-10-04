@@ -19,3 +19,4 @@ Route::get('/find-boarding-house', [BoardingHouseController::class, 'find'])->na
 Route::get('/find-boarding-house-results', [BoardingHouseController::class, 'findResults'])->name('find-boarding-house.results');
 
 Route::get('/boarding-house/{slug}', [BoardingHouseController::class, 'show'])->name('boarding-house.show');
+Route::get('/boarding-house/{slug}/rooms', [BoardingHouseController::class, 'showRooms'])->name('boarding-house-rooms.show');

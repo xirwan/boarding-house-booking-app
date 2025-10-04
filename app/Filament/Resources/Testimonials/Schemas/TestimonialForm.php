@@ -16,7 +16,9 @@ class TestimonialForm
             ->components([
                 FileUpload::make('photo')
                     ->image()
+                    ->disk('public')
                     ->directory('testimonials')
+                    ->visibility('public')
                     ->required()
                     ->columnSpan(2),
                 Select::make('boarding_house_id')

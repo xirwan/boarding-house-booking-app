@@ -84,21 +84,6 @@
                             class="tab-link rounded-full p-[8px_14px] border border-[#F1F2F6] text-sm font-semibold hover:bg-ngekos-black hover:text-white transition-all duration-300"
                             data-target-tab="#Testimonials-Tab">Testimonials</button>
                     </div>
-                    <div class="swiper-slide !w-fit">
-                        <button
-                            class="tab-link rounded-full p-[8px_14px] border border-[#F1F2F6] text-sm font-semibold hover:bg-ngekos-black hover:text-white transition-all duration-300"
-                            data-target-tab="#Rules-Tab">Rules</button>
-                    </div>
-                    <div class="swiper-slide !w-fit">
-                        <button
-                            class="tab-link rounded-full p-[8px_14px] border border-[#F1F2F6] text-sm font-semibold hover:bg-ngekos-black hover:text-white transition-all duration-300"
-                            data-target-tab="#Contact-Tab">Contact</button>
-                    </div>
-                    <div class="swiper-slide !w-fit">
-                        <button
-                            class="tab-link rounded-full p-[8px_14px] border border-[#F1F2F6] text-sm font-semibold hover:bg-ngekos-black hover:text-white transition-all duration-300"
-                            data-target-tab="#Rewards-Tab">Rewards</button>
-                    </div>
                 </div>
             </div>
             <div id="TabsContent" class="px-5">
@@ -127,38 +112,25 @@
                                 <div class="flex items-center gap-3">
                                     <div
                                         class="w-[70px] h-[70px] flex shrink-0 rounded-full border-4 border-white ring-1 ring-[#F1F2F6] overflow-hidden">
-                                        <img src="assets/images/photos/sami.png" class="w-full h-full object-cover"
+                                        <img src="{{ asset('storage/' . $testimonial->photo) }}" class="w-full h-full object-cover"
                                             alt="icon">
                                     </div>
                                     <div>
-                                        <p class="font-semibold">Samina Ryin</p>
-                                        <p class="mt-[2px] text-sm text-ngekos-grey">9 September 2024</p>
+                                        <p class="font-semibold">{{ $testimonial->name }}</p>
+                                        <p class="mt-[2px] text-sm text-ngekos-grey">{{ date_format($testimonial->created_at, 'd F Y') }}</p>
                                     </div>
                                 </div>
-                                <p class="leading-[26px]">Enak banget ngekos di sini sampe lupa rumah emak saking nyamannya
-                                    lol...</p>
+                                <p class="leading-[26px]">{{ $testimonial->content }}</p>
                                 <div class="flex">
-                                    <img src="assets/images/icons/Star 1.svg" class="w-[22px] h-[22px] flex shrink-0"
-                                        alt="">
-                                    <img src="assets/images/icons/Star 1.svg" class="w-[22px] h-[22px] flex shrink-0"
-                                        alt="">
-                                    <img src="assets/images/icons/Star 1.svg" class="w-[22px] h-[22px] flex shrink-0"
-                                        alt="">
-                                    <img src="assets/images/icons/Star 1.svg" class="w-[22px] h-[22px] flex shrink-0"
-                                        alt="">
-                                    <img src="assets/images/icons/Star 1.svg" class="w-[22px] h-[22px] flex shrink-0"
-                                        alt="">
+                                    @for($i = 0; $i < $testimonial->rating; $i++)
+                                        <img src="{{ asset('assets/images/icons/Star 1.svg') }}" class="w-[22px] h-[22px] flex shrink-0"
+                                            alt="">
+                                    @endfor
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
-                <div id="Rules-Tab" class="tab-content flex-col gap-5 hidden">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Porro, vitae.</div>
-                <div id="Contact-Tab" class="tab-content flex-col gap-5 hidden">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Porro, vitae.</div>
-                <div id="Rewards-Tab" class="tab-content flex-col gap-5 hidden">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Porro, vitae.</div>
             </div>
         </main>
         <div id="BottomNav" class="relative flex w-full h-[138px] shrink-0">
@@ -167,9 +139,9 @@
                     <p class="font-bold text-xl leading-[30px] text-white">
                         Rp. {{ number_format($boardingHouse->price, '2', ',', '.') }}
                         <br>
-                        <span class="text-sm font-normal">/bulan</span>
+                        <span class="text-sm font-normal">/Month</span>
                     </p>
-                    <a href="room-available.html"
+                    <a href="{{ route('boarding-house-rooms.show', $boardingHouse->slug) }}"
                         class="flex shrink-0 rounded-full py-[14px] px-5 bg-ngekos-orange font-bold text-white">Book
                         Now</a>
                 </div>

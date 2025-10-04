@@ -27,6 +27,7 @@ class BoardingHouseForm
                             ->schema([
                                 FileUpload::make('thumbnail')
                                     ->image()
+                                    ->disk('public')
                                     ->directory('boarding_house')
                                     ->visibility('public')
                                     ->required(),
@@ -60,6 +61,7 @@ class BoardingHouseForm
                                     ->schema([
                                         FileUpload::make('image')
                                             ->image()
+                                            ->disk('public')
                                             ->directory('bonuses')
                                             ->visibility('public')
                                             ->required(),
@@ -96,6 +98,7 @@ class BoardingHouseForm
                                             ->schema([
                                                 FileUpload::make('image')
                                                     ->image()
+                                                    ->disk('public')
                                                     ->directory('rooms')
                                                     ->visibility('public')
                                                     ->required(),
