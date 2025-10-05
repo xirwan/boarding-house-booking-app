@@ -59,12 +59,12 @@
                                         <div class="flex items-center gap-[6px]">
                                             <img src="assets/images/icons/location.svg" class="w-5 h-5 flex shrink-0"
                                                 alt="icon">
-                                            <p class="text-sm text-ngekos-grey">{{ $popularBoardingHouse->category->name }}</p>
+                                            <p class="text-sm text-ngekos-grey">{{ $popularBoardingHouse->address }}</p>
                                         </div>
                                         <div class="flex items-center gap-[6px]">
                                             <img src="assets/images/icons/3dcube.svg" class="w-5 h-5 flex shrink-0"
                                                 alt="icon">
-                                            <p class="text-sm text-ngekos-grey">{{ $popularBoardingHouse->address }}</p>
+                                            <p class="text-sm text-ngekos-grey">{{ $popularBoardingHouse->category->name }}</p>
                                         </div>
                                         <div class="flex items-center gap-[6px]">
                                             <img src="assets/images/icons/profile-2user.svg" class="w-5 h-5 flex shrink-0"
@@ -96,7 +96,7 @@
                 @foreach ($cities as $city)
                     <a href="{{ route('city.show', $city->slug) }}" class="card">
                         <div
-                            class="flex items-center rounded-[22px] p-[10px] gap-3 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
+                            class="flex items-center rounded-[22px] p-[5px] gap-1 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
                             <div
                                 class="w-[55px] h-[55px] flex shrink-0 rounded-full border-4 border-white ring-1 ring-[#F1F2F6] overflow-hidden">
                                 <img src="{{ asset('storage/' . $city->image) }}" class="w-full h-full object-cover"

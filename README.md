@@ -9,11 +9,24 @@ Boarding house booking app use laravel 12 and filament 4, with midtrans for paym
 <br>(In progress)
 
 ## Customer Page
+### Landing Page
 <p align='center'>
     <img src="public/images/customer-index.png" alt="customer index page">
+    <img src="public/images/customer-index-1.png" alt="customer index 1 page">
+    <img src="public/images/customer-index-2.png" alt="customer index 2 page">
+</p>
+
+### Boarding House Page
+<p align='center'>
     <img src="public/images/customer-boarding-house.png" alt="customer boarding house page">
     <img src="public/images/customer-boarding-house-1.png" alt="customer boarding house page 1">
+</p>
+
+### Boarding House Booking Page
+<p align='center'>
     <img src="public/images/customer-rooms.png" alt="customer room page ">
+    <img src="public/images/customer-information.png" alt="customer information page">
+    <img src="public/images/customer-information-1.png" alt="customer information page 1">
 </p>
 
 ## Login Admin Page

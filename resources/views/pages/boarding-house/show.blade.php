@@ -148,4 +148,8 @@
             </div>
         </div>
     </div>
+
+    @section('scripts')
+        <script src="{{ asset('assets/js/details.js') }}"></script>
+    @endsection
 @endsection

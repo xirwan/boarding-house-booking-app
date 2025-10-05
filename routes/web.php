@@ -20,3 +20,7 @@ Route::get('/find-boarding-house-results', [BoardingHouseController::class, 'fin
 
 Route::get('/boarding-house/{slug}', [BoardingHouseController::class, 'show'])->name('boarding-house.show');
 Route::get('/boarding-house/{slug}/rooms', [BoardingHouseController::class, 'showRooms'])->name('boarding-house-rooms.show');
+
+Route::get('/boarding-house/booking/{slug}', [BookingController::class, 'booking'])->name('booking');
+Route::get('/boarding-house/booking/{slug}/information', [BookingController::class, 'information'])->name('booking.information');
+Route::post('/boarding-house/booking/{slug}/information/save', [BookingController::class, 'saveInformation'])->name('booking.information.save');

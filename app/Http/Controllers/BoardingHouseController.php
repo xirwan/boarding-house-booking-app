@@ -51,10 +51,6 @@ class BoardingHouseController extends Controller
     {
         $boardingHouseRooms = $this->boardingHouseRepository->getBoardingHouseBySlug($slug);
 
-        // $rooms = BoardingHouse::whereHas('rooms', function ($query) {
-        //     $query->where('is_available', '1');
-        // })->where('slug', $boardingHouseRooms->slug)->get();
-
         $rooms = Room::whereHas('boardingHouse', function ($query) use ($boardingHouseRooms){
             $query->where('slug', $boardingHouseRooms->slug);
         })->where('is_available', '1')->get();

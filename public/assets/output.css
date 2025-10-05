@@ -1103,6 +1103,10 @@ video {
   padding: 10px;
 }
 
+.p-\[5px\] {
+  padding: 5px;
+}
+
 .p-\[10px_20px\] {
   padding: 10px 20px;
 }
@@ -1276,6 +1280,14 @@ video {
 .text-ngekos-black {
   --tw-text-opacity: 1;
   color: rgb(7 7 7 / var(--tw-text-opacity));
+}
+
+.border-red {
+  border: 1px solid red;
+}
+
+.text-error {
+  color: red;
 }
 
 .\!text-ngekos-orange {
