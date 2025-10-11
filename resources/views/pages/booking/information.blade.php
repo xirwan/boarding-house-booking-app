@@ -96,7 +96,7 @@
                         class="appearance-none outline-none w-full font-semibold placeholder:text-ngekos-grey placeholder:font-normal"
                         placeholder="Write your phone">
                 </label>
-                @error('phone')
+                @error('phone_number')
                     <p class="text-sm text-error">{{ $message }}</p>
                 @enderror
             </div>
