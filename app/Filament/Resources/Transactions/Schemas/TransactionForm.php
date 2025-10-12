@@ -37,15 +37,11 @@ class TransactionForm
                         'full_payment' => 'Full payment',
                     ])
                     ->required(),
-                Select::make('payment_status')
-                    ->options([
-                        'pending' => 'Pending',
-                        'paid' => 'Paid',
-                    ])
+                TextInput::make('payment_status')
                     ->required(),
                 DatePicker::make('start_date')
                     ->required(),
-                TextInput::make('Duration')
+                TextInput::make('duration')
                     ->numeric()
                     ->required(),
                 TextInput::make('total_amount')

@@ -32,4 +32,9 @@ class HomeController extends Controller
 
         return view('pages.home', compact('categories', 'popularBoardingHouses', 'cities', 'boardingHouses'));
     }
+
+    public function help()
+    {
+        return view('pages.help');
+    }
 }

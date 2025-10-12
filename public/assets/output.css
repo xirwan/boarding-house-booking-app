@@ -1030,6 +1030,11 @@ video {
   border-color: rgb(241 242 246 / var(--tw-border-opacity));
 }
 
+.border-\[\#FF801A\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 128 26 / var(--tw-border-opacity));
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));

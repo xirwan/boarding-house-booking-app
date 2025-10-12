@@ -5,8 +5,7 @@
 <p align="center">
     Boarding house booking app
 </p>
-Boarding house booking app use laravel 12 and filament 4, with midtrans for payment and twilio for whatsapp notification
-<br>(In progress)
+Boarding house booking app use laravel 12 and filament 4, with midtrans for payment
 
 ## Customer Page
 ### Landing Page
@@ -39,15 +38,25 @@ Boarding house booking app use laravel 12 and filament 4, with midtrans for paym
     <img src="public/images/customer-checkout-3.png" alt="customer checkout page 3">
 </p>
 
+### Boarding House Payment Page
+<p align='center'>
+    <img src="public/images/customer-payment.jpg" alt="customer payment page" width="265">
+    <img src="public/images/customer-payment-1.jpg" alt="customer payment page 1" width="265">
+    <img src="public/images/customer-payment-1.jpg" alt="customer payment page 2" width="265">
+</p>
+
 ### Boarding Houce Check Booking Page
 <p align='center'>
-    <img src="public/images/customer-check-booking.png" alt="customer check booking page ">
+    <img src="public/images/customer-check-booking.png" alt="customer check booking page">
     <img src="public/images/customer-check-booking-1.png" alt="customer check booking page 1">
     <img src="public/images/customer-check-booking-2.png" alt="customer check booking page 2">
 </p>
 
 ## Login Admin Page
 ![admin login page](/public/images/login-admin.png)
+
+## Dashboard Page
+![admin dahsboard page](/public/images/dashboard.png)
 
 ## Boarding House Page
 Index page

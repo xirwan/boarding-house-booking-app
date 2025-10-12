@@ -6,8 +6,11 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\TextUI\Help;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/help', [HomeController::class, 'help'])->name('help');
 
 Route::get('/check-booking', [BookingController::class, 'check'])->name('check-booking');
 Route::post('/check-booking', [BookingController::class, 'show'])->name('check-booking.show');
