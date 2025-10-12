@@ -42,7 +42,7 @@ Boarding house booking app use laravel 12 and filament 4, with midtrans for paym
 <p align='center'>
     <img src="public/images/customer-payment.jpg" alt="customer payment page" width="265">
     <img src="public/images/customer-payment-1.jpg" alt="customer payment page 1" width="265">
-    <img src="public/images/customer-payment-1.jpg" alt="customer payment page 2" width="265">
+    <img src="public/images/customer-payment-2.jpg" alt="customer payment page 2" width="265">
 </p>
 
 ### Boarding Houce Check Booking Page
